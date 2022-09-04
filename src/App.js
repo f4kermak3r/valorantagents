@@ -11,19 +11,16 @@ class App extends Component {
       agents: [],
       searchField: "",
     };
-    console.log("constructor happening");
   }
 
   componentDidMount() {
     fetch("https://valorant-api.com/v1/agents")
-      // fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) =>
         this.setState(() => {
           return { agents: users.data };
         })
       );
-    console.log("component happening");
   }
 
   onSearchChange = (event) => {
