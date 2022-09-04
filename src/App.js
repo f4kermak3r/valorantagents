@@ -1,6 +1,7 @@
 import "./App.css";
 import { Component } from "react";
 import CardList from "./components/card-list/card-list.component";
+import SearchBox from "./components/search-box/search-box.component";
 
 class App extends Component {
   constructor() {
@@ -42,18 +43,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input
-          className="search-box"
-          type="search"
+        <SearchBox
+          onChangeHandler={onSearchChange}
           placeholder="search agents"
-          onChange={onSearchChange}
+          className="search-box"
         />
-        {
-          //   fAgents.map((agent) => {
-          //     return <div key={agent.uuid}><h1>{agent.displayName}</h1></div>
-          //   })
-          // }
-        }
         <CardList agents={fAgents} />
       </div>
     );
