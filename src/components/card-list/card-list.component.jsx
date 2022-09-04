@@ -6,7 +6,7 @@ class CardList extends Component {
     return (
       <div>
         {agents.map((agent) => (
-          <h1>{agent.displayName}</h1>
+          <h1 key={agent.uuid}>{agent.displayName}</h1>
         ))}
       </div>
     );
