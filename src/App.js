@@ -54,7 +54,7 @@ class App extends Component {
           //   })
           // }
         }
-        <CardList />
+        <CardList agents={fAgents} />
       </div>
     );
   }

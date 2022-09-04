@@ -1,14 +1,16 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 class CardList extends Component {
-
-    render() {
-        return (
-            <div>
-            hello im the cardlist component
-            </div>
-        )
-    }
+  render() {
+    const { agents } = this.props;
+    return (
+      <div>
+        {agents.map((agent) => (
+          <h1>{agent.displayName}</h1>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default CardList;
